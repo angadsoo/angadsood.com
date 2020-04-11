@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Learn about the different rockets, propulsion methods, Interplanetary travel and how humans will conquer the Universe.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Spacefaring Civilization</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+        <style type="text/css">
+            
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Open Sans', Arial, sans-serif;
+                font-weight: 700;
+                background-color: black;
+            }
+
+            @keyframes show {
+            	0% {opacity:0;}
+            	100% {opacity:1;}
+            }
+            @keyframes hide {
+            	0% {opacity:1;}
+            	100% {opacity:0.8;}
+            }
+            @keyframes enter {
+            	0% {background-color:rgba(255,255,255,0);}
+            	100% {background-color:#55b8c4;}
+            }
+            @keyframes enter2 {
+            	0% {background-color:rgba(255,255,255,0);}
+            	100% {background-color:rgb(191, 30, 46);}
+            }
+
+
+            h1 {
+            	
+            	font-family: 'Josefin Sans', sans-serif;
+    			color:white;
+    			text-align:left;
+    			font-size: 4vh;   
+    			animation:show 10s;
+				animation-iteration-count:1;
+				animation-fill-mode:forwards;
+				animation-delay:0s;
+				display: inline-block;
+				
+				
+            }
+            
+
+            h2 {
+            	text-align:center;
+            }
+            #header {
+            	margin: 0 auto;
+            	width: 70%;
+
+            }
+            #header_wrapper{
+            	margin: 0;
+            	width: 100%;
+            	height: 10%;
+            	
+            	background-color: black;
+            	
+
+
+            }
+            .welcome-section {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                overflow: hidden;
+            }
+            .welcome-section .content-wrap {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate3d(-50%, -50%, 0);
+            }
+            .welcome-section .content-wrap .fly-in-text {
+                list-style: none;
+            }
+            .welcome-section .content-wrap .fly-in-text li {
+                display: inline-block;
+                margin-right: 30px;
+                font-size: 5em;
+                color: #fff;
+                opacity: 1;
+                transition: all 2s ease;
+            }
+            .welcome-section .content-wrap .fly-in-text li:last-child {
+                margin-right: 0;
+            }
+            .welcome-section .content-wrap .enter-button {
+                display: block;
+                text-align: center;
+                font-size: 1em;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                opacity: 1;
+                transition: all 1s ease 2s;
+                animation:enter 2s;
+                animation-iteration-count:1;
+                animation-fill-mode:forwards;
+                animation-delay:5s;
+            }
+            .underline--magical {
+  				background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  				background-repeat: no-repeat;
+  				background-size: 100% 0.2em;
+  				background-position: 0 88%;
+  				transition: background-size 0.25s ease-in;
+			}
+			.underline--magical:hover {
+  				background-size: 100% 88%;
+			}
+
+			body,html {
+				margin: 0;
+				
+				background: #000;
+			}
+
+			#nav {
+				width:100%;
+				
+				margin-left:auto;
+				display: inline-block;
+				margin-top: 2vh;
+			}
+			
+			.nav ul{ 
+				margin: 150px auto 0; 
+				padding: 0; 
+				list-style: none; 
+				display: table;
+				width: 600px;
+				text-align: center;
+				
+			}
+			.nav li { 
+				display: inline-block;
+				position: relative; 
+				padding: 15px 0;
+				text-decoration:none;
+			}
+			.come_in a{
+				animation:show 15s;
+				animation-iteration-count:1;
+				animation-fill-mode:forwards;
+				animation-delay:0s;
+			}
+
+			a {
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: 0.15em;
+				display: inline-block;
+				padding: 15px 20px;
+
+				
+			}
+
+			.works_here a:hover{
+				color: #000;
+			}
+
+			.works_here a:after {    
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 2px;
+				left: 50%;
+				position: absolute;
+				background: #fff;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+
+			}
+			.works_here a:hover:after { 
+				width: 100%; 
+				left: 0; 
+
+			}
+			.current a{
+				color: #55b8c4;
+			}
+			.current a:hover{
+				color: #55b8c4;
+			}
+
+			.default-heading, #nav {
+				display:inline-block;
+			}
+			.default-heading{
+				margin-top: ;
+			}
+			video{
+				opacity: 0.8;
+				width: 100%;
+			}
+			.overlay{
+			position: absolute;
+         	top: 0;
+         	left: 0;
+            background-color: rgba(0, 0, 0, 1);
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+		}
+		
+		.caption {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 10vh;
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+
+        }
+        #caption2 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 7vh;
+            color: white;
+            visibility: hidden;
+            font-family: 'Josefin Sans', sans-serif;
+
+        }
+         #caption3 {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 8vh;
+            color: white;
+            visibility: hidden;
+            animation:enter2 2s;
+            animation-iteration-count:1;
+            animation-fill-mode:forwards;
+            animation-delay:35s;
+
+        }
+        .clearfloat{
+        	clear: both;
+        }
+        #welcomeDiv .overlay{
+        	visibility: visible;
+        	animation: show 30s;
+        	animation-iteration-count:1;
+        	animation-fill-mode:forwards;
+        	animation-delay:0s;
+        }
+        
+		#welcomeDiv{
+			position: relative;
+			display: none;
+			width: 100%;
+			height: 80%;
+		}
+		.no-color-change a:hover{
+			color: white;
+		}
+		#Earth{
+			display: none;
+			visibility: hidden;
+			position: relative;
+		}
+		.overlay2{
+			position: absolute;
+         	top: 0;
+         	left: 0;
+            background-color: rgba(0, 0, 0, 0);
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+		}
+		#Earth .overlay2{
+        	visibility: visible;
+        	animation: show 30s;
+        	animation-iteration-count:1;
+        	animation-fill-mode:forwards;
+        	animation-delay:0s;
+        }
+		#caption4 {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 10vh;
+            color: white;
+            visibility: hidden;
+
+        }
+        #caption5 {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5vh;
+            color: white;
+            visibility: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #181c1f;
+            opacity: 0.8;
+            padding:25px;
+
+        }
+        #footer{
+        	margin: 0;
+        	width: 100%;
+        	background-color:#000; 
+        	padding-top: 12px;
+        	padding-bottom: 20px;
+        	height: 10%;
+        	margin-top: 0;
+        	margin-bottom: 0;
+        	visibility: hidden;
+        	font-size: 2vh;
+        }
+        .content {
+        	color:#ababac;; 
+        	width: 65%;
+        	margin: 0 auto;
+        	margin-top: 0;
+        	margin-bottom: 0;
+        }
+        
+
+        #footer a:hover{
+        	color: black;
+        }
+        #footer h2:hover{
+        	color: black;
+        }
+        .smaller-text{
+        	font-size: 1.6vh;
+        }
+
+		
+		
+
+
+
+			@media screen and (max-height: 300px) {
+				ul {
+					margin-top: 40px;
+				}
+			}
+
+
+            
+            .welcome-section.content-hidden .content-wrap .fly-in-text li { opacity: 0; }
+            .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(1) { transform: translate3d(-200px, 0, 0); }
+            .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(2) { transform: translate3d(200px, 0, 0); }
+
+            .welcome-section.content-hidden .content-wrap .enter-button { opacity: 0; transform: translate3d(0, -30px, 0);}
+            
+            @media (min-width: 800px) {
+                .welcome-section .content-wrap .fly-in-text li { font-size: 10em; }
+                .welcome-section .content-wrap .enter-button { font-size: 4em; }
+            }
+            iframe {
+			width: 100%;
+			height: 100%;
+			border: none;}
+
+            
+            
+            
+        </style>
+    </head>
+    <body onload="showdiv2();">
+    <body>
+        
+    	<div class="works_here">
+    		<div class="welcome-section content-hidden">
+    			<div class="content-wrap">
+    				<ul class="fly-in-text">
+    					<li>h</li>
+    					<li>i</li>
+    					
+    				</ul>
+
+    				<a href="#" class="enter-button" onclick="showDiv()">Enter</a>
+    			</div>
+    		</div>
+
+    		<div id="hidden" style="display: none;">
+    			<div id="header_wrapper">
+    				<div id="header">
+    					
+
+    					<div id="nav">
+
+
+
+    						<ul class="nav">
+    							
+
+    							<span class="right">
+    								<li><h1>Angad Sood </h1></li>
+    								<li class="current"><a href="index.html" class="no-color-change">Home</a></li>
+    								<li class="come_in"><a href="about.html" class="underline--magical">About</a></li>
+    								<li class="come_in"><a href="contact.html" class="underline--magical">Contact</a></li>
+    								<li class="come_in"><a href="info.html" class="underline--magical">Info</a></li>
+    							</span>
+    						</ul>
+    					</div>
+    					<div class="clearfloat"></div>
+
+    				</div>
+
+
+    			</div>
+    		</div>
+
+
+    		<div id="welcomeDiv">
+    			<video autoplay class="mars__header-video" oncontextmenu="return false;" loop muted preload="auto"><source src="http://spacex.com/sites/spacex/files/mars-header.mp4" type="video/mp4"></video>
+    				<div class="overlay"><div class="caption">The Goal</div><div id="caption2">Making Life Interplanetary</div><div id="caption3" class="no-color-change"><a href="#Earth">Scroll down</a></div></div>
+    			</div>
+    		</div>
+
+    		<div id="Earth">
+    			<video autoplay class="mars__header-video" oncontextmenu="return false;" loop muted preload="auto"><source src="vid/earth.mp4" type="video/mp4"></video>
+    				<div class="overlay2"><div id="caption4">Technology</div><div id="caption5"><p>It has been my lifelong dream to see humans reach another planet and colonize it.</p><br>
+    					<p> The only way to make it to the other planets is to use rockets. Mars is our best bet in the near future. On the Info page I compare different rockets, propulsion methods, stages of a rocket and the vehicle of choice for humans to reach Mars.</p><br>
+    					<p>Here's what Elon Musk thinks:</p><br>
+    					<p><span class="smaller-text"><em>&quot;You want to wake up in the morning and think the future is going to be great - and that's what being a spacefaring civilization is all about. It's about believing in the future and thinking that the future will be better than the past. And I can't think of anything more exciting than going out there and being among the stars.&quot;</em></span>
+    					</p>
+    					</div></div>
+    				</div>
+    			</div>
+    			<div class="clearfloat"></div>
+    		</div>
+    	</div>
+
+    	<div id="footer">
+    		<div class="content"><h2><span class="underline--magical"><a href="contact.html">Please click here to contact me</a></h2></span></div>
+    	</div>
+
+
+
+        
+        
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function() {
+                
+                var welcomeSection = $('.welcome-section'),
+                    enterButton = welcomeSection.find('.enter-button');
+                
+                setTimeout(function() {
+                    welcomeSection.removeClass('content-hidden');
+                }, 500);
+                
+                enterButton.on('click', function(e) {
+                    e.preventDefault();
+                    welcomeSection.addClass('content-hidden').fadeOut();
+                });
+
+
+                
+                
+            })();
+
+
+            
+            
+            
+        </script>
+
+
+        <script type="text/javascript">
+        	function showDiv() {
+        		document.getElementById('welcomeDiv').style.display = "block";
+        		document.getElementById('nav').style.display = "block";
+        		document.getElementById('hidden').style.display = "block";
+        		document.getElementById('Earth').style.display = "block";
+        	}
+
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
+        <script  src="js/index.js"></script>
+        <script>
+        	function showdiv2() {
+        		setTimeout(function () {
+        			document.getElementById("caption2").style.visibility = "visible";
+        		}, 30000);
+        		setTimeout(function () {
+        			document.getElementById("caption3").style.visibility = "visible";
+        		}, 35000);
+        		setTimeout(function () {
+        			document.getElementById("caption4").style.visibility = "visible";
+        		}, 41500);
+        		setTimeout(function () {
+        			document.getElementById("caption5").style.visibility = "visible";
+        		}, 41500);
+        		setTimeout(function () {
+        			document.getElementById("Earth").style.visibility = "visible";
+        		}, 41500);
+        		setTimeout(function () {
+        			document.getElementById("footer").style.visibility = "visible";
+        		}, 41500);
+        		
+        	}
+        </script>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
