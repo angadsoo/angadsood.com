@@ -543,7 +543,21 @@ video{
         
             
             <h1>Contact form</h1>
-            <form name="submitQuery" action="confirmation.html" method="POST" data-netlify="true">
+            <form name="contact" action="confirmation.html" method="POST" data-netlify="true">
+                <div class="form-row">
+                  <label><input type="text" name="name" placeholder="Your name"/></label>   
+                </div>
+                <div class="form-row">
+                  <label><input type="email" name="email" placeholder="email"/></label>
+                </div>
+                <div class="form-row">
+                  <label> <textarea name="message" id="message" placeholder="type your message here please"></textarea></label>
+            </div>
+                <div class="form-row">
+                  <button type="submit" id="submit-id" class="pure-material-button-contained">Send</button>
+                </div>
+              </form>
+            <!-- <form name="submitQuery" action="confirmation.html" method="POST" data-netlify="true">
                 <div id="column">
                     <div class="form-row">
                         <label for="name" class="main-label">Name:</label>
@@ -554,7 +568,7 @@ video{
                     <div class="form-row">
                         <label class="main-label" for="email">Email:</label>
                         <input id="email" type="email" placeholder="brad@usc.edu">
-                    </div>
+                    </div> -->
 
                     <!-- <div class="form-row">
                         <label class="main-label">Are you a student at USC:</label>
@@ -564,7 +578,7 @@ video{
 
                     
                 
-                <div>
+                <!-- <div>
 
                     
                    
@@ -591,7 +605,7 @@ video{
 
 
             </div>
-        </form>
+        </form> -->
         </div>
     
         <div class="clearfloat"></div>
