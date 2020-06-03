@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Learn about the different rockets, propulsion methods, Interplanetary travel and how humans will conquer the Universe.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Spacefaring Civilization</title>
+        <title>Angad Sood</title>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
         <style type="text/css">
@@ -220,6 +220,15 @@
             width: 100%;
             visibility: hidden;
 		}
+		.overlay{
+			position: absolute;
+         	top: 0;
+         	left: 0;
+            background-color: rgba(0, 0, 0, 1);
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+		}
 		
 		.caption {
             position: absolute;
@@ -230,6 +239,7 @@
             font-size: 10vh;
             color: white;
             font-family: 'Josefin Sans', sans-serif;
+			visibility: hidden;
 
         }
         #caption2 {
@@ -254,9 +264,9 @@
             color: white;
             visibility: hidden;
             animation:enter2 2s;
-            animation-iteration-count:1;
+            animation-iteration-count:100;
             animation-fill-mode:forwards;
-            animation-delay:35s;
+            animation-delay:18s;
 
         }
         .clearfloat{
@@ -264,13 +274,23 @@
         }
         #welcomeDiv .overlay{
         	visibility: visible;
-        	animation: show 30s;
+        	animation: show 18.8s;
         	animation-iteration-count:1;
         	animation-fill-mode:forwards;
         	animation-delay:0s;
         }
         
 		#welcomeDiv{
+			position: relative;
+			display: none;
+			width: 100%;
+			height: 80%;
+		}
+		#welcomeDiv-Mobile .overlay{
+        	visibility: visible;
+        }
+        
+		#welcomeDiv-Mobile{
 			position: relative;
 			display: none;
 			width: 100%;
@@ -357,10 +377,6 @@
         	font-size: 1.6vh;
         }
 
-		
-		
-
-
 
 			@media screen and (max-height: 300px) {
 				ul {
@@ -438,8 +454,11 @@
 
     		<div id="welcomeDiv">
     			<video autoplay class="mars__header-video" oncontextmenu="return false;" loop muted preload="auto"><source src="http://spacex.com/sites/spacex/files/mars-header.mp4" type="video/mp4"></video>
-    				<div class="overlay"><div class="caption">The Goal</div><div id="caption2">Making Life Interplanetary</div><div id="caption3" class="no-color-change"><a href="#Earth">Scroll down</a></div></div>
-    			</div>
+    				<div class="overlay"><div class="caption" id="the-goal">The Goal</div><div id="caption2">Making Life Interplanetary</div><div id="caption3" class="no-color-change"><a href="#Earth">Scroll down</a></div></div>
+				</div>
+				<div id="welcomeDiv-Mobile">
+					<div class="overlay10"><div class="caption-mobile">Hi, feel free to contact me or use the headers to get to know more about my interest in space.</div>
+				</div>
     		</div>
 
     		<div id="Earth">
@@ -509,24 +528,27 @@
         <script  src="js/index.js"></script>
         <script>
         	function showdiv2() {
+				if($(window).width()>1000){
+					document.getElementById("the-goal").style.visibility="visible";
         		setTimeout(function () {
         			document.getElementById("caption2").style.visibility = "visible";
-        		}, 30000);
+        		}, 18000);
         		setTimeout(function () {
         			document.getElementById("caption3").style.visibility = "visible";
-        		}, 35000);
+        		}, 19000);
         		setTimeout(function () {
         			document.getElementById("caption4").style.visibility = "visible";
-        		}, 41500);
+        		}, 19500);
         		setTimeout(function () {
         			document.getElementById("caption5").style.visibility = "visible";
-        		}, 41500);
+        		}, 19500);
         		setTimeout(function () {
         			document.getElementById("Earth").style.visibility = "visible";
-        		}, 41500);
+        		}, 19500);
         		setTimeout(function () {
         			document.getElementById("footer").style.visibility = "visible";
-        		}, 41500);
+        		}, 19500);
+				}
         		
         	}
         </script>
